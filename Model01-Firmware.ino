@@ -56,6 +56,9 @@
 // Support for an LED mode that emulates a pool of water
 #include <Kaleidoscope-LED-Wavepool.h>
 
+// Support for an LED mode that emulates a roaring fire
+#include <Kaleidoscope-LED-Fire.h>
+
 // Support for Keyboardio's internal keyboard testing mode
 #include "Kaleidoscope-Model01-TestMode.h"
 
@@ -439,6 +442,9 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // Enable the Wavepool effect
   WavepoolEffect,
 
+  // Enable the Fire effect
+  FireEffect,
+
   // The numpad plugin is responsible for lighting up the 'numpad' mode
   // with a custom LED effect
   NumPad,
@@ -493,6 +499,10 @@ void setup() {
   // The Wavepool effect emulates a pool of water with occasional raindrops
   WavepoolEffect.idle_timeout = 5000;  // 5 seconds
   WavepoolEffect.activate();
+
+  // The Fire effect emulates a roaring fire
+  FireEffect.idle_timeout = 5000;  // 5 seconds
+  FireEffect.activate();
 
   // We want to make sure that the firmware starts with LED effects off
   // This avoids over-taxing devices that don't have a lot of power to share
