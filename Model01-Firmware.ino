@@ -53,6 +53,9 @@
 // Support for an LED mode that prints the keys you press in letters 4px high
 #include "Kaleidoscope-LED-AlphaSquare.h"
 
+// Support for an LED mode that emulates a pool of water
+#include <Kaleidoscope-LED-Wavepool.h>
+
 // Support for Keyboardio's internal keyboard testing mode
 #include "Kaleidoscope-Model01-TestMode.h"
 
@@ -433,6 +436,9 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // The stalker effect lights up the keys you've pressed recently
   //StalkerEffect,
 
+  // Enable the Wavepool effect
+  WavepoolEffect,
+
   // The numpad plugin is responsible for lighting up the 'numpad' mode
   // with a custom LED effect
   NumPad,
@@ -483,6 +489,10 @@ void setup() {
   // called 'BlazingTrail'. For details on other options,
   // see https://github.com/keyboardio/Kaleidoscope-LED-Stalker
   StalkerEffect.variant = STALKER(BlazingTrail);
+
+  // The Wavepool effect emulates a pool of water with occasional raindrops
+  WavepoolEffect.idle_timeout = 5000;  // 5 seconds
+  WavepoolEffect.activate();
 
   // We want to make sure that the firmware starts with LED effects off
   // This avoids over-taxing devices that don't have a lot of power to share
