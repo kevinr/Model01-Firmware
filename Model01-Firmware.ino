@@ -410,7 +410,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
 
   // The rainbow effect changes the color of all of the keyboard's keys at the same time
   // running through all the colors of the rainbow.
-  LEDRainbowEffect,
+  //LEDRainbowEffect,
 
   // The rainbow wave effect lights up your keyboard with all the colors of a rainbow
   // and slowly moves the rainbow across your keyboard
@@ -418,20 +418,20 @@ KALEIDOSCOPE_INIT_PLUGINS(
 
   // The chase effect follows the adventure of a blue pixel which chases a red pixel across
   // your keyboard. Spoiler: the blue pixel never catches the red pixel
-  LEDChaseEffect,
+  //LEDChaseEffect,
 
   // These static effects turn your keyboard's LEDs a variety of colors
-  solidRed, solidOrange, solidYellow, solidGreen, solidBlue, solidIndigo, solidViolet,
+  //solidRed, solidOrange, solidYellow, solidGreen, solidBlue, solidIndigo, solidViolet,
 
   // The breathe effect slowly pulses all of the LEDs on your keyboard
-  LEDBreatheEffect,
+  //LEDBreatheEffect,
 
   // The AlphaSquare effect prints each character you type, using your
   // keyboard's LEDs as a display
-  AlphaSquareEffect,
+  //AlphaSquareEffect,
 
   // The stalker effect lights up the keys you've pressed recently
-  StalkerEffect,
+  //StalkerEffect,
 
   // The numpad plugin is responsible for lighting up the 'numpad' mode
   // with a custom LED effect
