@@ -501,7 +501,6 @@ void setup() {
   WavepoolEffect.activate();
 
   // The Fire effect emulates a roaring fire
-  FireEffect.idle_timeout = 5000;  // 5 seconds
   FireEffect.activate();
 
   // We want to make sure that the firmware starts with LED effects off
