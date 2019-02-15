@@ -483,6 +483,10 @@ void setup() {
   // needs to be explicitly told which keymap layer is your numpad layer
   NumPad.numPadLayer = NUMPAD;
 
+  //LED key; needed because I moved LED to the function layer
+  BootGreetingEffect.key_col = 6;
+  BootGreetingEffect.key_row = 0;
+
   // We configure the AlphaSquare effect to use RED letters
   AlphaSquare.color = CRGB(255, 0, 0);
 
