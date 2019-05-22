@@ -531,6 +531,7 @@ void setup() {
   WavepoolEffect.activate();
 
   // The Fire effect emulates a roaring fire
+  FireEffect.highlight_wasd = true;
   FireEffect.activate();
 
   // We want to make sure that the firmware starts with LED effects off
