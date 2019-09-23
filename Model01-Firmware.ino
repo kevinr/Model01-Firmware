@@ -358,6 +358,10 @@ static kaleidoscope::plugin::LEDSolidColor solidBlue(0, 70, 130);
 static kaleidoscope::plugin::LEDSolidColor solidIndigo(0, 0, 170);
 static kaleidoscope::plugin::LEDSolidColor solidViolet(130, 0, 120);
 
+// Some custom solid color modes for giggles
+static kaleidoscope::plugin::LEDSolidColor solidMediumWhite(127, 127, 127);
+static kaleidoscope::plugin::LEDSolidColor solidDimWhite(70, 70, 70);
+
 /** toggleLedsOnSuspendResume toggles the LEDs off when the host goes to sleep,
  * and turns them back on when it wakes up.
  */
@@ -452,6 +456,9 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // These static effects turn your keyboard's LEDs a variety of colors
   //solidRed, solidOrange, solidYellow, solidGreen, solidBlue, solidIndigo, solidViolet,
 
+  // just white
+  solidDimWhite, solidMediumWhite,
+
   // The breathe effect slowly pulses all of the LEDs on your keyboard
   //LEDBreatheEffect,
 
@@ -459,17 +466,14 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // keyboard's LEDs as a display
   //AlphaSquareEffect,
 
-  // The stalker effect lights up the keys you've pressed recently
-  //StalkerEffect,
-
   // Enable the Wavepool effect
-  WavepoolEffect,
+  //WavepoolEffect,
 
   // Enable the Fire effect
   FireEffect,
 
   // The Colormap effect makes it possible to set up per-layer colormaps
-  ColormapEffect,
+  //ColormapEffect,
 
   // The numpad plugin is responsible for lighting up the 'numpad' mode
   // with a custom LED effect
@@ -549,7 +553,7 @@ void setup() {
   // We need to tell the Colormap plugin how many layers we want to have custom
   // maps for. To make things simple, we set it to five layers, which is how
   // many editable layers we have (see above).
-  ColormapEffect.max_layers(5);
+  //ColormapEffect.max_layers(5);
 }
 
 /** loop is the second of the standard Arduino sketch functions.
